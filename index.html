@@ -1,11 +1,210 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>示例标题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Yozora · 产品经理作品集</title>
+    <!-- 引入外部样式表 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 可选：引入 Font Awesome 图标库，让评分星星好看 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>欢迎来到我的网站</h1>
+
+<!-- 导航栏（简洁） -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">Yozora</a>
+        <ul class="nav-links">
+            <li><a href="#project">项目</a></li>
+            <li><a href="#journey">建站记录</a></li>
+            <li><a href="#experience">经历</a></li>
+            <li><a href="#values">价值观</a></li>
+            <li><a href="#feedback">反馈</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero 欢迎区 -->
+<header class="hero">
+    <div class="container">
+        <h1>Hallo，欢迎来到我的个人站 👋</h1>
+        <p>我是 Yozora · 正在转型产品经理的无人机爱好者</p>
+        <p class="hero-note">用技术思维做产品，用产品思维造飞机</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- ========= 项目介绍（核心） ========= -->
+    <section id="project" class="section-card">
+        <h2>📌 项目介绍</h2>
+        <p>这个网站本身就是我的第一个产品项目 —— 从0到1独立完成 <strong>需求分析 → 原型设计 → 开发部署 → 反馈迭代</strong> 的全流程。</p>
+        
+        <div class="project-showcase">
+            <div class="showcase-item">
+                <h3>🧠 立项思维导图</h3>
+                <div class="img-placeholder">
+                    <!-- 替换为你自己的思维导图图片 -->
+                    <img src="images/mindmap.png" alt="思维导图占位图" onerror="this.src='https://placehold.co/800x400?text=思维导图示例'">
+                </div>
+                <p class="caption">用思维导图梳理了网站的目标用户、内容架构、技术选型与时间安排。</p>
+            </div>
+            <div class="showcase-item">
+                <h3>🎨 Axure 原型设计</h3>
+                <div class="img-placeholder">
+                    <!-- 替换为你自己的 Axure 截图 -->
+                    <img src="images/axure-prototype.png" alt="Axure原型截图" onerror="this.src='https://placehold.co/800x400?text=Axure原型截图示例'">
+                </div>
+                <p class="caption">低保真原型，确定页面布局与核心交互，遵循“简洁、突出内容”的原则。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= 建站过程记录（时间线） ========= -->
+    <section id="journey" class="section-card">
+        <h2>📅 建站过程记录</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-day">Day 1</div>
+                <div class="timeline-content">确定网站目标与内容结构，画出思维导图</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 2</div>
+                <div class="timeline-content">用 Axure 绘制低保真原型，规划页面跳转逻辑</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 3-4</div>
+                <div class="timeline-content">手写 HTML/CSS，实现响应式布局，加入样式</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 5</div>
+                <div class="timeline-content">集成评分反馈模块，测试表单功能</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 6</div>
+                <div class="timeline-content">部署到 GitHub Pages，生成公网链接</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 7</div>
+                <div class="timeline-content">优化移动端适配，收集内测反馈并迭代</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= 一些经历 ========= -->
+    <section id="experience" class="section-card">
+        <h2>💼 一些经历</h2>
+        <div class="experience-grid">
+            <div class="exp-item">
+                <h3>无人机飞控开发 · 个人项目</h3>
+                <p>从零搭建四轴无人机，完成飞控代码编写（PID、姿态解算）、硬件焊接与调试，成功试飞。通过该项目深入理解嵌入式系统与传感器融合。</p>
+            </div>
+            <div class="exp-item">
+                <h3>产品经理自学与实践</h3>
+                <p>系统学习 NPDP 知识体系，掌握市场调研、竞品分析、PRD 撰写；独立完成个人站项目，实现从需求到落地的闭环。</p>
+            </div>
+            <div class="exp-item">
+                <h3>技术社区贡献</h3>
+                <p>活跃于无人机开源社区，撰写技术笔记，参与飞控相关问题讨论，具备跨团队沟通与文档编写能力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= 价值观 ========= -->
+    <section id="values" class="section-card">
+        <h2>⭐ 价值观</h2>
+        <div class="values-list">
+            <div class="value-item">💡 用户至上 —— 每一个功能都源于真实需求</div>
+            <div class="value-item">🔧 动手创造 —— 拒绝空想，用原型说话</div>
+            <div class="value-item">📈 数据驱动 —— 用反馈迭代，持续优化</div>
+            <div class="value-item">🤝 开放协作 —— 技术无边界，乐于分享</div>
+        </div>
+    </section>
+
+    <!-- ========= 个人介绍 + 联系方式 ========= -->
+    <section class="section-card">
+        <h2>👤 个人介绍</h2>
+        <p>我叫 Yozura，一个热爱技术的产品新人。拥有无人机硬件与飞控的实操背景，让我在理解用户需求时更能评估技术可行性。正在求职 <strong>产品经理 / 助理产品经理</strong> 岗位，希望用技术+产品思维打造真正好用的智能硬件或物流系统。</p>
+        <p><strong>联系方式：</strong> yozora@example.com · GitHub: <a href="#">yozora</a> · 微信: yozora_pm</p>
+    </section>
+
+    <!-- ========= 评分 + 建议板块（反馈收集） ========= -->
+    <section id="feedback" class="section-card feedback-card">
+        <h2>📝 给这个项目打分 & 提出建议</h2>
+        <p>你的反馈将帮助我迭代改进，非常感谢！</p>
+        
+        <!-- 简易评分（星星），仅用于前端展示，实际收集通过外部表单 -->
+        <div class="rating-area">
+            <span class="rating-label">你的评分：</span>
+            <div class="stars" id="starRating">
+                <i class="far fa-star" data-value="1"></i>
+                <i class="far fa-star" data-value="2"></i>
+                <i class="far fa-star" data-value="3"></i>
+                <i class="far fa-star" data-value="4"></i>
+                <i class="far fa-star" data-value="5"></i>
+            </div>
+            <span id="ratingValue" class="rating-value">未评分</span>
+        </div>
+
+        <!-- 建议输入框，通过按钮跳转到外部表单（或替换为自己的表单链接） -->
+        <div class="suggest-area">
+            <label for="suggestion">你的建议：</label>
+            <textarea id="suggestion" rows="3" placeholder="比如：页面加载速度、内容结构、希望增加什么功能..."></textarea>
+            <button id="submitFeedbackBtn" class="btn-primary">提交反馈</button>
+            <p class="form-note">* 点击提交后，将跳转到问卷表单（我使用腾讯问卷收集数据，你也可以替换为自己的链接）。</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 Yozora · 本网站为个人作品集，用于求职展示 | 使用 HTML/CSS 手写 + GitHub Pages 部署</p>
+    </div>
+</footer>
+
+<script>
+    // 简单的星星评分交互（仅前端视觉反馈）
+    const stars = document.querySelectorAll('#starRating i');
+    const ratingValueSpan = document.getElementById('ratingValue');
+    let currentRating = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const value = parseInt(this.getAttribute('data-value'));
+            currentRating = value;
+            ratingValueSpan.innerText = value + ' 分';
+            // 更新星星样式
+            stars.forEach((s, idx) => {
+                if (idx < value) {
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                } else {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+        });
+    });
+
+    // 提交反馈：将评分和建议带到外部表单（你可以替换成自己的问卷链接）
+    const submitBtn = document.getElementById('submitFeedbackBtn');
+    submitBtn.addEventListener('click', function() {
+        const suggestion = document.getElementById('suggestion').value;
+        // 如果用户没有评分，默认为0
+        const rating = currentRating || 0;
+        // 跳转到预设的表单链接，并将评分和建议作为URL参数（根据你使用的表单平台调整）
+        // 这里以腾讯问卷为例，实际你需要创建自己的问卷，并替换下面的链接
+        const formUrl = 'https://wj.qq.com/s2/你的问卷ID/';  // 【请替换为你自己的反馈表单地址】
+        // 如果你没有在线表单，可以改用 mailto 方式，但不推荐。
+        // 以下提供两种提示：
+        if (confirm(`你给出了 ${rating} 分，建议内容：${suggestion.slice(0, 50)}…\n\n点击确定后，将打开外部表单完成最终提交。`)) {
+            // 打开表单链接（可以带上参数，但大多数公开表单不支持预填）
+            window.open(formUrl, '_blank');
+            // 也可以简单提示已复制建议内容，让用户自行粘贴
+            alert('请在弹出的表单中填写评分和建议（可参考刚才填写的内容）。感谢你的反馈！');
+        }
+    });
+</script>
 </body>
 </html>
