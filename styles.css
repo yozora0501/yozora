@@ -1,44 +1,48 @@
-/* Complete styling code for the project */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #f8f9fa;
+    padding: 10px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+    color: #343a40;
+    font-size: 2.5em;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+section {
+    margin: 20px 0;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #f8f9fa;
+    padding: 10px;
     text-align: center;
-    padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.portfolio-item {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .portfolio {
+        flex-direction: column;
+    }
 }
