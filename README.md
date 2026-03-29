@@ -14,5 +14,3 @@ This is a brief description of my portfolio project. It showcases my skills and 
 - React
 - Node.js
 
-## Conclusion:
-This portfolio demonstrates my ability to create functional and aesthetically pleasing web applications.
