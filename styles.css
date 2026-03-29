@@ -1,48 +1,325 @@
-.portfolio {
+/* reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafaf8;
+    color: #1e1e2a;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 导航栏 */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.3px;
+    text-decoration: none;
+    color: #1e1e2a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a4a5a;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #0066cc;
+}
+
+/* Hero 区域 */
+.hero {
+    background: linear-gradient(145deg, #ffffff 0%, #f3f4f6 100%);
+    padding: 60px 0 48px;
+    text-align: center;
+    border-bottom: 1px solid #eaeef2;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #2c3e4e;
+    margin-bottom: 8px;
+}
+
+.hero-note {
+    font-size: 1rem;
+    color: #5a6874;
+    border-top: 1px solid #dce5ec;
+    display: inline-block;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+/* 通用卡片样式 */
+.section-card {
+    background: white;
+    border-radius: 28px;
+    padding: 32px 36px;
+    margin: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eef2f5;
+}
+
+.section-card h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-left: 5px solid #0066cc;
+    padding-left: 18px;
+}
+
+/* 项目展示区 */
+.project-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 28px;
+}
+
+.showcase-item {
+    flex: 1;
+    min-width: 260px;
+}
+
+.showcase-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+.img-placeholder {
+    background: #f0f2f5;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #5e6f8d;
+    text-align: center;
+}
+
+/* 时间线 */
+.timeline {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px dashed #e0e7ed;
+    padding-bottom: 16px;
+}
+
+.timeline-day {
+    min-width: 70px;
+    font-weight: 700;
+    background: #eef3fc;
+    padding: 4px 12px;
+    border-radius: 40px;
+    text-align: center;
+    color: #0066cc;
+}
+
+.timeline-content {
+    color: #2c3e4f;
+}
+
+/* 经历网格 */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    margin-top: 12px;
+}
+
+.exp-item {
+    background: #fafcff;
     padding: 20px;
+    border-radius: 24px;
+    border: 1px solid #eef2f8;
 }
 
-header {
-    background-color: #f8f9fa;
-    padding: 10px;
-    text-align: center;
+.exp-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
-header h1 {
-    color: #343a40;
-    font-size: 2.5em;
+/* 价值观 */
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 12px;
 }
 
-section {
-    margin: 20px 0;
+.value-item {
+    background: #f0f4f9;
+    padding: 12px 20px;
+    border-radius: 60px;
+    font-weight: 500;
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
+/* 反馈区域 */
+.feedback-card {
+    background: #fefdf7;
+}
+
+.rating-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0 20px;
+}
+
+.stars i {
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffb83b;
+    margin-right: 6px;
+    transition: transform 0.1s;
+}
+
+.stars i:hover {
+    transform: scale(1.1);
+}
+
+.rating-value {
+    background: #eef2fa;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+}
+
+.suggest-area label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.suggest-area textarea {
     width: 100%;
+    padding: 14px;
+    border-radius: 20px;
+    border: 1px solid #cfdfed;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
 }
 
-.portfolio-item {
-    margin: 15px;
-    padding: 10px;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    transition: transform 0.2s;
+.btn-primary {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.portfolio-item:hover {
-    transform: scale(1.05);
+.btn-primary:hover {
+    background: #004c99;
 }
 
-@media (max-width: 600px) {
-    .portfolio {
+.form-note {
+    font-size: 0.8rem;
+    color: #6c7a8e;
+    margin-top: 12px;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 32px 0;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 32px;
+    color: #5f6c84;
+    font-size: 0.85rem;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .section-card {
+        padding: 24px 20px;
+    }
+    .timeline-item {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .timeline-day {
+        align-self: flex-start;
+    }
+    .project-showcase {
         flex-direction: column;
     }
 }
