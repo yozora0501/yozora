@@ -1,13 +1,13 @@
-# Portfolio Project
+# 项目作品
 
-This is a brief description of my portfolio project. It showcases my skills and projects in web development, software engineering, and design. 
+这是一个个人站，用于展示以及分享内容
 
-## Features:
-- Beautiful user interface
-- Responsive design
-- Built with React and Node.js
+## 项目需求
+- 展示以及分享个人内容
+- 作为更简便的链接以及明星片对接hr
+- 展示产品能力以及个人经历作为虚拟简历
 
-## Technologies Used:
+## 解决方案:
 - HTML
 - CSS
 - JavaScript
