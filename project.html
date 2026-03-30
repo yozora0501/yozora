@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- 导航栏：只有 Yozora 返回首页 -->
 <nav class="navbar">
     <div class="container">
         <a href="index.html" class="logo">Yozora</a>
@@ -58,7 +59,7 @@
             </div>
         </div>
 
-        <!-- 评分反馈区域 -->
+        <!-- 反馈区域（代码与之前相同） -->
         <div class="feedback-area">
             <h3>📝 给这个项目打分 & 提出建议</h3>
             <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
@@ -76,7 +77,7 @@
                 <label for="suggestion">你的建议：</label>
                 <textarea id="suggestion" rows="3" placeholder="比如：页面加载速度、内容结构、希望增加什么功能..."></textarea>
                 <button id="submitFeedbackBtn" class="btn-primary">提交反馈</button>
-                <p style="font-size: 0.8rem; color: #aaa; margin-top: 12px;">* 点击提交后将打开外部问卷（我使用腾讯问卷收集数据，可替换为你自己的表单链接）</p>
+                <p style="font-size: 0.8rem; color: #aaa; margin-top: 12px;">* 点击提交后将打开外部问卷（请替换为你自己的表单链接）</p>
             </div>
         </div>
     </div>
@@ -88,12 +89,11 @@
     </div>
 </footer>
 
+<!-- 评分与提交的 JavaScript（与之前相同） -->
 <script>
-    // 星星评分交互
     const stars = document.querySelectorAll('#starRating i');
     const ratingSpan = document.getElementById('ratingValue');
     let currentRating = 0;
-
     stars.forEach(star => {
         star.addEventListener('click', function() {
             const val = parseInt(this.getAttribute('data-value'));
@@ -110,13 +110,11 @@
             });
         });
     });
-
-    // 提交反馈
     const submitBtn = document.getElementById('submitFeedbackBtn');
     submitBtn.addEventListener('click', function() {
         const suggestion = document.getElementById('suggestion').value;
         const rating = currentRating || 0;
-        // 替换成你自己的表单链接
+        // 重要：将下面的链接替换为你自己的反馈表单地址
         const formUrl = 'https://wj.qq.com/s2/你的问卷ID/';
         if (confirm(`你给出了 ${rating} 分，建议内容：${suggestion.slice(0, 50)}…\n点击确定后将打开外部表单完成最终提交。`)) {
             window.open(formUrl, '_blank');
@@ -124,7 +122,5 @@
         }
     });
 </script>
-</body>
-</html>
 </body>
 </html>
