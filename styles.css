@@ -6,7 +6,7 @@
 }
 
 body {
-    /* 深黑色背景 */
+    /* 深黑色背景 - 关键修改 */
     background-color: #000000;
     /* 米白色文字 */
     color: #f0f0f0;
@@ -44,7 +44,7 @@ body {
 }
 
 .logo:hover {
-    color: #66ffcc; /* 悬停时亮绿色，可选 */
+    color: #66ffcc; /* 悬停时亮绿色 */
 }
 
 /* ========== 通用按钮样式 ========== */
@@ -85,7 +85,7 @@ body {
     color: #f0f0f0;
 }
 
-/* ========== 首页的两个卡片（可点击跳转） ========== */
+/* ========== 首页的两个卡片（左右并排，可点击） ========== */
 .feature-grid {
     display: flex;
     gap: 30px;
@@ -93,17 +93,18 @@ body {
     margin: 20px 0 60px;
 }
 
-/* 每个卡片就是一个链接 */
+/* 每个卡片就是一个链接，宽度平均分配（在桌面端左右并排） */
 .feature-card {
-    flex: 1;
+    flex: 1;                   /* 关键：两个卡片各占一半宽度 */
+    min-width: 250px;          /* 防止太窄时折行 */
     background: #0a0a0a;
     border: 1px solid #2a2a2a;
     border-radius: 28px;
     padding: 32px 24px;
-    text-align: center;          /* 所有文字和图标居中 */
+    text-align: center;        /* 所有文字和图标居中 */
     transition: transform 0.2s, border-color 0.2s;
-    text-decoration: none;       /* 去除下划线 */
-    color: inherit;              /* 继承父级文字颜色 */
+    text-decoration: none;
+    color: inherit;
     display: block;
 }
 
@@ -112,7 +113,7 @@ body {
     border-color: #66ffcc;       /* 悬停时边框亮绿色 */
 }
 
-/* 图标样式 */
+/* 图标样式（居中显示） */
 .feature-card i {
     font-size: 48px;
     color: #66ffcc;              /* 图标亮绿色 */
@@ -132,7 +133,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* ========== 项目页面中的图片占位区 ========== */
+/* ========== 以下为其他页面公用样式（保持不变） ========== */
 .image-placeholder {
     background: #1a1a1a;
     border-radius: 20px;
@@ -149,7 +150,6 @@ body {
     margin: 0 auto;
 }
 
-/* ========== 时间线样式 ========== */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -179,7 +179,6 @@ body {
     color: #dddddd;
 }
 
-/* ========== 反馈区域 ========== */
 .feedback-area {
     background: #0e0e0e;
     border-radius: 24px;
@@ -220,7 +219,6 @@ textarea {
     margin: 10px 0;
 }
 
-/* ========== 个人简介页面 ========== */
 .experience-list {
     margin: 20px 0 20px 20px;
     color: #dddddd;
@@ -240,7 +238,6 @@ textarea {
     color: #66ffcc;
 }
 
-/* ========== 页脚 ========== */
 .footer {
     text-align: center;
     padding: 32px 0;
@@ -250,10 +247,9 @@ textarea {
     font-size: 0.85rem;
 }
 
-/* ========== 响应式（手机适配） ========== */
 @media (max-width: 768px) {
     .feature-grid {
-        flex-direction: column;
+        flex-direction: column;   /* 手机屏幕时变成上下排列 */
     }
     .navbar .container {
         text-align: left;
