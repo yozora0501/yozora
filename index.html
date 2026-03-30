@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yozora · 产品经理求职</title>
+    <!-- 引入外部样式表 -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome 6 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+<!-- 导航栏：只有 Yozora 返回首页 -->
 <nav class="navbar">
     <div class="container">
         <a href="index.html" class="logo">Yozora</a>
@@ -16,25 +19,28 @@
 </nav>
 
 <main class="container">
-    <!-- 简洁个人介绍区 -->
+    <!-- 个人介绍卡片 -->
     <div class="card" style="text-align: center;">
+        <!-- 头像（可替换 images/avatar.png） -->
         <img src="images/avatar.png" alt="头像" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;" onerror="this.src='https://placehold.co/120x120?text=Avatar'">
         <h1>Yozora</h1>
-        <p style="font-size: 1.2rem; color: #bbbbbb;">正在转型产品经理的无人机爱好者</p>
-        <p style="margin-top: 12px; color: #aaa;">技术背景 · 产品思维 · 动手创造</p>
+        <p style="font-size: 1.2rem; color: #bbbbbb;">hello，欢迎来到我的个人站！</p>
+        <p style="margin-top: 12px; color: #aaa;">永远不要只满足于世界的表象，要敢于探寻未知的可能。</p>
     </div>
 
-    <!-- 两个卡片：项目和个人简介，点击整个卡片跳转 -->
+    <!-- 两个可点击卡片：项目和关于我 -->
     <div class="feature-grid">
+        <!-- 点击整个卡片跳转到项目页面 -->
         <a href="project.html" class="feature-card">
-            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i>   <!-- 火箭图标 -->
             <h3>项目作品</h3>
             <p>个人站从0到1全流程<br>思维导图 → 原型 → 部署</p>
         </a>
+        <!-- 点击整个卡片跳转到个人简介页面 -->
         <a href="about.html" class="feature-card">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user"></i>     <!-- 用户图标 -->
             <h3>关于我</h3>
-            <p>飞控开发经历 · 产品自学<br>价值观与求职意向</p>
+            <p>我的经历<br>价值观与求职意向</p>
         </a>
     </div>
 </main>
