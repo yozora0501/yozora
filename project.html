@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- 导航栏：只有 Yozora 返回首页 -->
 <nav class="navbar">
     <div class="container">
         <a href="index.html" class="logo">Yozora</a>
@@ -21,16 +20,19 @@
         <h2>📌 项目：个人作品集网站</h2>
         <p>这个网站是我独立完成的产品项目，从需求分析、原型设计到开发部署、反馈收集，完整走了一遍产品流程。</p>
 
+        <!-- ========= 用户可修改区域：思维导图图片 ========= -->
         <h3>🧠 立项思维导图</h3>
         <div class="image-placeholder">
-            <img src="images/mindmap.png" alt="思维导图" onerror="this.src='https://placehold.co/800x400?text=思维导图示例'">
+            <img src="思维导图.png" alt="思维导图" onerror="this.src='https://placehold.co/800x400?text=思维导图示例'">
         </div>
 
+        <!-- ========= 用户可修改区域：Axure原型截图 ========= -->
         <h3>🎨 Axure 原型设计</h3>
         <div class="image-placeholder">
-            <img src="images/axure-prototype.png" alt="Axure原型" onerror="this.src='https://placehold.co/800x400?text=Axure原型截图示例'">
+            <img src="原型截图.png" alt="Axure原型" onerror="this.src='https://placehold.co/800x400?text=Axure原型截图示例'">
         </div>
 
+        <!-- 建站时间线（可修改内容） -->
         <h3>📅 建站过程记录</h3>
         <div class="timeline">
             <div class="timeline-item">
@@ -43,7 +45,7 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-day">Day 3-4</div>
-                <div class="timeline-content">手写 HTML/CSS，实现响应式布局</div>
+                <div class="timeline-content">编写 HTML/CSS，实现响应式布局</div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-day">Day 5</div>
@@ -59,8 +61,37 @@
             </div>
         </div>
 
-        <!-- 反馈区域（代码与之前相同） -->
-        <div class="feedback-area">
+        <!-- ========= 新增：产品文档模块（逻辑图、PRD、交互设计） ========= -->
+        <h3>📄 产品文档 & 交互设计</h3>
+        <div style="display: flex; gap: 24px; flex-wrap: wrap; margin: 20px 0;">
+            <!-- 逻辑图占位 -->
+            <div style="flex: 1; background: #1a1a1a; border-radius: 20px; padding: 20px; text-align: center;">
+                <i class="fas fa-project-diagram" style="font-size: 40px; color: #66ffcc; margin-bottom: 12px; display: block;"></i>
+                <h4 style="margin-bottom: 8px;">逻辑图</h4>
+                <p style="font-size: 0.9rem; color: #ccc;">业务流程/系统架构图</p>
+                <!-- 用户可替换为自己的图片或链接 -->
+                <img src="images/logic-diagram.png" alt="逻辑图" style="max-width: 100%; border-radius: 12px; margin-top: 12px;" onerror="this.src='https://placehold.co/400x200?text=逻辑图占位'">
+            </div>
+            <!-- PRD文档占位 -->
+            <div style="flex: 1; background: #1a1a1a; border-radius: 20px; padding: 20px; text-align: center;">
+                <i class="fas fa-file-alt" style="font-size: 40px; color: #66ffcc; margin-bottom: 12px; display: block;"></i>
+                <h4 style="margin-bottom: 8px;">PRD文档</h4>
+                <p style="font-size: 0.9rem; color: #ccc;">产品需求文档（可下载）</p>
+                <!-- 用户可替换为真实文档链接 -->
+                <a href="#" style="color: #66ffcc; text-decoration: none; display: inline-block; margin-top: 8px;">📄 查看/下载 →</a>
+            </div>
+            <!-- 交互设计占位 -->
+            <div style="flex: 1; background: #1a1a1a; border-radius: 20px; padding: 20px; text-align: center;">
+                <i class="fas fa-mouse-pointer" style="font-size: 40px; color: #66ffcc; margin-bottom: 12px; display: block;"></i>
+                <h4 style="margin-bottom: 8px;">交互设计</h4>
+                <p style="font-size: 0.9rem; color: #ccc;">可交互原型 / 演示链接</p>
+                <!-- 用户可替换为真实原型链接 -->
+                <a href="#" style="color: #66ffcc; text-decoration: none; display: inline-block; margin-top: 8px;">🔗 在线预览 →</a>
+            </div>
+        </div>
+
+        <!-- ========= 评分反馈区域（使用 Formspree 收集数据） ========= -->
+        <div class="feedback-area" id="feedbackArea">
             <h3>📝 给这个项目打分 & 提出建议</h3>
             <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
                 <span>你的评分：</span>
@@ -77,7 +108,7 @@
                 <label for="suggestion">你的建议：</label>
                 <textarea id="suggestion" rows="3" placeholder="比如：页面加载速度、内容结构、希望增加什么功能..."></textarea>
                 <button id="submitFeedbackBtn" class="btn-primary">提交反馈</button>
-                <p style="font-size: 0.8rem; color: #aaa; margin-top: 12px;">* 点击提交后将打开外部问卷（请替换为你自己的表单链接）</p>
+                <div id="feedbackStatus" style="margin-top: 12px; font-size: 0.8rem; color: #aaa;"></div>
             </div>
         </div>
     </div>
@@ -85,15 +116,16 @@
 
 <footer class="footer">
     <div class="container">
-        <p>© 2025 Yozora · 本网站为个人作品集，用于求职展示</p>
+        <p>© 2026 Yozora · 本网站为个人作品集，仅用于展示</p>
     </div>
 </footer>
 
-<!-- 评分与提交的 JavaScript（与之前相同） -->
 <script>
+    // ------------------- 星星评分交互 -------------------
     const stars = document.querySelectorAll('#starRating i');
     const ratingSpan = document.getElementById('ratingValue');
     let currentRating = 0;
+
     stars.forEach(star => {
         star.addEventListener('click', function() {
             const val = parseInt(this.getAttribute('data-value'));
@@ -110,15 +142,68 @@
             });
         });
     });
+
+    // ------------------- 提交反馈到 Formspree -------------------
+    // 使用说明：
+    // 1. 前往 https://formspree.io/ 注册免费账号
+    // 2. 创建一个新表单，获得你的表单 endpoint URL（例如 https://formspree.io/f/xxxx）
+    // 3. 将下面的 YOUR_FORMSPREE_ENDPOINT 替换为你的真实地址
+    const formspreeEndpoint = 'https://formspree.io/f/xvzvroye'; // 用户必须替换！
+
     const submitBtn = document.getElementById('submitFeedbackBtn');
-    submitBtn.addEventListener('click', function() {
-        const suggestion = document.getElementById('suggestion').value;
-        const rating = currentRating || 0;
-        // 重要：将下面的链接替换为你自己的反馈表单地址
-        const formUrl = 'https://wj.qq.com/s2/你的问卷ID/';
-        if (confirm(`你给出了 ${rating} 分，建议内容：${suggestion.slice(0, 50)}…\n点击确定后将打开外部表单完成最终提交。`)) {
-            window.open(formUrl, '_blank');
-            alert('请在弹出的表单中填写评分和建议。感谢你的反馈！');
+    const statusDiv = document.getElementById('feedbackStatus');
+
+    submitBtn.addEventListener('click', async function() {
+        const suggestion = document.getElementById('suggestion').value.trim();
+        const rating = currentRating;
+
+        if (rating === 0) {
+            statusDiv.innerHTML = '⚠️ 请先给项目打分（点击星星）';
+            statusDiv.style.color = '#ffaa66';
+            return;
+        }
+        if (suggestion === '') {
+            statusDiv.innerHTML = '⚠️ 请填写你的建议';
+            statusDiv.style.color = '#ffaa66';
+            return;
+        }
+
+        // 禁用按钮，防止重复提交
+        submitBtn.disabled = true;
+        submitBtn.textContent = '提交中...';
+        statusDiv.innerHTML = '';
+
+        try {
+            const response = await fetch(formspreeEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    rating: rating,
+                    suggestion: suggestion,
+                    page: 'Yozora个人站项目'
+                })
+            });
+            if (response.ok) {
+                statusDiv.innerHTML = '✅ 反馈已提交，感谢你的建议！我会认真查看并迭代优化。';
+                statusDiv.style.color = '#66ffcc';
+                // 清空表单
+                document.getElementById('suggestion').value = '';
+                // 重置星星
+                currentRating = 0;
+                ratingSpan.innerText = '未评分';
+                stars.forEach(s => {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                });
+            } else {
+                throw new Error('提交失败');
+            }
+        } catch (error) {
+            statusDiv.innerHTML = '❌ 提交失败，请稍后重试。如果问题持续，请联系我：yozora@example.com';
+            statusDiv.style.color = '#ff8888';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = '提交反馈';
         }
     });
 </script>
