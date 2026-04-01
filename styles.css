@@ -6,12 +6,11 @@
 }
 
 body {
-    /* 深黑色背景 - 关键修改 */
     background-color: #000000;
-    /* 米白色文字 */
     color: #f0f0f0;
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.5;
+    padding-bottom: 80px;   /* 为固定页脚留出空间，避免遮挡内容 */
 }
 
 /* 内容容器，限制最大宽度并居中 */
@@ -44,7 +43,7 @@ body {
 }
 
 .logo:hover {
-    color: #66ffcc; /* 悬停时亮绿色 */
+    color: #66ffcc;
 }
 
 /* ========== 通用按钮样式 ========== */
@@ -68,7 +67,7 @@ body {
 
 /* ========== 卡片样式（用于所有页面） ========== */
 .card {
-    background: #0a0a0a;   /* 卡片背景稍亮，与纯黑背景区分 */
+    background: #0a0a0a;
     border-radius: 28px;
     padding: 32px 36px;
     margin: 40px 0;
@@ -80,7 +79,7 @@ body {
     font-size: 1.9rem;
     font-weight: 600;
     margin-bottom: 20px;
-    border-left: 5px solid #66ffcc; /* 装饰条 */
+    border-left: 5px solid #66ffcc;
     padding-left: 18px;
     color: #f0f0f0;
 }
@@ -93,15 +92,14 @@ body {
     margin: 20px 0 60px;
 }
 
-/* 每个卡片就是一个链接，宽度平均分配（在桌面端左右并排） */
 .feature-card {
-    flex: 1;                   /* 关键：两个卡片各占一半宽度 */
-    min-width: 250px;          /* 防止太窄时折行 */
+    flex: 1;
+    min-width: 250px;
     background: #0a0a0a;
     border: 1px solid #2a2a2a;
     border-radius: 28px;
     padding: 32px 24px;
-    text-align: center;        /* 所有文字和图标居中 */
+    text-align: center;
     transition: transform 0.2s, border-color 0.2s;
     text-decoration: none;
     color: inherit;
@@ -110,15 +108,14 @@ body {
 
 .feature-card:hover {
     transform: translateY(-4px);
-    border-color: #66ffcc;       /* 悬停时边框亮绿色 */
+    border-color: #66ffcc;
 }
 
-/* 图标样式（居中显示） */
 .feature-card i {
     font-size: 48px;
-    color: #66ffcc;              /* 图标亮绿色 */
-    display: block;              /* 块级元素，方便居中 */
-    margin: 0 auto 16px auto;    /* 上下左右自动居中，下边距16px */
+    color: #66ffcc;
+    display: block;
+    margin: 0 auto 16px auto;
 }
 
 .feature-card h3 {
@@ -129,11 +126,11 @@ body {
 }
 
 .feature-card p {
-    color: #bbbbbb;              /* 描述文字灰色 */
+    color: #bbbbbb;
     font-size: 0.95rem;
 }
 
-/* ========== 以下为其他页面公用样式（保持不变） ========== */
+/* ========== 以下为其他页面公用样式 ========== */
 .image-placeholder {
     background: #1a1a1a;
     border-radius: 20px;
@@ -238,18 +235,24 @@ textarea {
     color: #66ffcc;
 }
 
+/* ========== 固定页脚样式 ========== */
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    padding: 32px 0;
+    padding: 16px 0;
     border-top: 1px solid #2a2a2a;
-    margin-top: 32px;
+    background-color: #000000;
     color: #888888;
     font-size: 0.85rem;
+    z-index: 100;
 }
 
 @media (max-width: 768px) {
     .feature-grid {
-        flex-direction: column;   /* 手机屏幕时变成上下排列 */
+        flex-direction: column;
     }
     .navbar .container {
         text-align: left;
