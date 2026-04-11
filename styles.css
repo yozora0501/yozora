@@ -401,6 +401,8 @@ body.viewer-open {
 
 .resource-card {
     flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 20px;
@@ -408,6 +410,24 @@ body.viewer-open {
     text-align: center;
     position: relative;
     overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.resource-link-card {
+    cursor: pointer;
+}
+
+.resource-link-card:hover {
+    transform: translateY(-4px);
+    border-color: #4d6d61;
+    background: #1d211f;
+}
+
+.resource-link-card:focus-visible {
+    outline: 2px solid #66ffcc;
+    outline-offset: 4px;
 }
 
 .resource-icon {
@@ -450,6 +470,10 @@ body.viewer-open {
     justify-content: space-between;
     gap: 12px;
     margin-bottom: 8px;
+}
+
+.resource-card-top .resource-icon {
+    margin: 0;
 }
 
 .resource-label {
@@ -510,6 +534,13 @@ body.viewer-open {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
 }
 
+.resource-card-featured.resource-link-card:hover {
+    border-color: #66ffcc;
+    background:
+        radial-gradient(circle at top right, rgba(102, 255, 204, 0.12), transparent 40%),
+        linear-gradient(180deg, #1a2723, #121716);
+}
+
 .resource-card-featured::after {
     content: '';
     position: absolute;
@@ -544,6 +575,13 @@ body.viewer-open {
     align-items: center;
     gap: 8px;
     margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    align-self: center;
+}
+
+.resource-card-featured .resource-link {
+    align-self: flex-start;
 }
 
 .resource-link:hover {
@@ -694,6 +732,80 @@ textarea {
     }
     .resource-grid {
         flex-direction: column;
+        gap: 14px;
+        margin: 16px 0 20px;
+    }
+    .resource-card {
+        padding: 18px;
+        border-radius: 18px;
+        text-align: left;
+        touch-action: manipulation;
+    }
+    .resource-card .resource-icon {
+        width: 44px;
+        height: 44px;
+        margin: 0 0 12px;
+        border-radius: 14px;
+    }
+    .resource-card h4 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+    }
+    .resource-card p {
+        font-size: 0.86rem;
+        line-height: 1.55;
+    }
+    .resource-card img {
+        width: 100%;
+        max-height: 128px;
+        object-fit: cover;
+        object-position: top;
+        margin-top: 12px;
+    }
+    .resource-card-featured {
+        box-shadow: none;
+    }
+    .resource-card-top {
+        margin-bottom: 10px;
+    }
+    .resource-card-top .resource-icon {
+        margin: 0;
+    }
+    .resource-label {
+        margin-bottom: 6px;
+        font-size: 0.66rem;
+    }
+    .doc-badge {
+        min-width: 48px;
+        padding: 5px 10px;
+        font-size: 0.68rem;
+    }
+    .resource-meta {
+        justify-content: flex-start;
+        gap: 8px;
+        margin-top: 12px;
+    }
+    .resource-meta-item {
+        padding: 6px 10px;
+        font-size: 0.76rem;
+    }
+    .resource-link {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 14px;
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1px solid #30483f;
+        background: rgba(102, 255, 204, 0.06);
+        font-size: 0.88rem;
+        align-self: stretch;
+    }
+    .resource-card-featured .resource-link {
+        margin-top: 14px;
+        align-self: stretch;
+    }
+    .resource-link i {
+        order: 2;
     }
     .image-viewer-dialog {
         width: 100vw;
