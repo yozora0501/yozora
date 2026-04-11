@@ -17,23 +17,44 @@
 
 <main class="container">
     <div class="card">
-        <h2>📌 项目：个人作品集网站</h2>
+        <h2 class="section-heading">
+            <span class="heading-icon"><i class="far fa-folder-open"></i></span>
+            <span class="title-text">项目：个人作品集网站</span>
+        </h2>
         <p>这个网站是我独立完成的产品项目，从需求分析、原型设计到开发部署、反馈收集，完整走了一遍产品流程。</p>
 
         <!-- ========= 用户可修改区域：思维导图图片 ========= -->
-        <h3>🧠 立项思维导图</h3>
+        <h3 class="section-heading">
+            <span class="heading-icon"><i class="fas fa-sitemap"></i></span>
+            <span class="title-text">立项思维导图</span>
+        </h3>
         <div class="image-placeholder">
-            <img src="思维导图.png" alt="思维导图" onerror="this.src='https://placehold.co/800x400?text=思维导图示例'">
+            <img
+                src="思维导图.svg"
+                alt="思维导图"
+                class="zoomable-image"
+                data-preview="立项思维导图"
+                onerror="this.src='https://placehold.co/800x400?text=思维导图示例'">
+            <div class="image-hint">
+                <i class="fas fa-search-plus"></i>
+                <span>点击图片可放大查看，支持缩放阅读</span>
+            </div>
         </div>
 
         <!-- ========= 用户可修改区域：Axure原型截图 ========= -->
-        <h3>🎨 Axure 原型设计</h3>
+        <h3 class="section-heading">
+            <span class="heading-icon"><i class="far fa-object-group"></i></span>
+            <span class="title-text">Axure 原型设计</span>
+        </h3>
         <div class="image-placeholder">
             <img src="原型截图.png" alt="Axure原型" onerror="this.src='https://placehold.co/800x400?text=Axure原型截图示例'">
         </div>
 
         <!-- 建站时间线（可修改内容） -->
-        <h3>📅 建站过程记录</h3>
+        <h3 class="section-heading">
+            <span class="heading-icon"><i class="far fa-calendar-alt"></i></span>
+            <span class="title-text">建站过程记录</span>
+        </h3>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-day">Day 1</div>
@@ -62,37 +83,55 @@
         </div>
 
         <!-- ========= 新增：产品文档模块（逻辑图、PRD、交互设计） ========= -->
-        <h3>📄 产品文档 & 交互设计</h3>
-        <div style="display: flex; gap: 24px; flex-wrap: wrap; margin: 20px 0;">
+        <h3 class="section-heading">
+            <span class="heading-icon"><i class="far fa-file-alt"></i></span>
+            <span class="title-text">产品文档 & 交互设计</span>
+        </h3>
+        <div class="resource-grid">
             <!-- 逻辑图占位 -->
-            <div style="flex: 1; background: #1a1a1a; border-radius: 20px; padding: 20px; text-align: center;">
-                <i class="fas fa-project-diagram" style="font-size: 40px; color: #66ffcc; margin-bottom: 12px; display: block;"></i>
-                <h4 style="margin-bottom: 8px;">逻辑图</h4>
-                <p style="font-size: 0.9rem; color: #ccc;">业务流程/系统架构图</p>
+            <div class="resource-card">
+                <div class="resource-icon"><i class="fas fa-sitemap"></i></div>
+                <span class="resource-label">Structure</span>
+                <h4>逻辑图</h4>
+                <p>业务流程/系统架构图</p>
                 <!-- 用户可替换为自己的图片或链接 -->
-                <img src="images/logic-diagram.png" alt="逻辑图" style="max-width: 100%; border-radius: 12px; margin-top: 12px;" onerror="this.src='https://placehold.co/400x200?text=逻辑图占位'">
+                <img src="images/logic-diagram.png" alt="逻辑图" onerror="this.src='https://placehold.co/400x200?text=逻辑图占位'">
             </div>
             <!-- PRD文档占位 -->
-            <div style="flex: 1; background: #1a1a1a; border-radius: 20px; padding: 20px; text-align: center;">
-                <i class="fas fa-file-alt" style="font-size: 40px; color: #66ffcc; margin-bottom: 12px; display: block;"></i>
-                <h4 style="margin-bottom: 8px;">PRD文档</h4>
-                <p style="font-size: 0.9rem; color: #ccc;">产品需求文档（可下载）</p>
-                <!-- 用户可替换为真实文档链接 -->
-                <a href="#" style="color: #66ffcc; text-decoration: none; display: inline-block; margin-top: 8px;">📄 查看/下载 →</a>
+            <div class="resource-card resource-card-featured">
+                <div class="resource-card-top">
+                    <div class="resource-icon"><i class="far fa-file-alt"></i></div>
+                    <span class="doc-badge">PRD</span>
+                </div>
+                <span class="resource-label">Requirements</span>
+                <h4>需求文档</h4>
+                <p>集中展示产品目标、功能范围、核心流程与迭代说明，便于统一评审与持续更新。</p>
+                <div class="resource-meta">
+                    <span class="resource-meta-item"><i class="far fa-file-alt"></i><span>产品需求文档</span></span>
+                    <span class="resource-meta-item"><i class="fas fa-sync-alt"></i><span>实时更新</span></span>
+                    <span class="resource-meta-item"><i class="fas fa-layer-group"></i><span>Notion 承载</span></span>
+                </div>
+                <a href="https://www.notion.so/PRD-65f93fb205a6436c82df1cd188f0610f?source=copy_link" target="_blank" rel="noopener noreferrer" class="resource-link">
+                 <i class="fas fa-arrow-right"></i><span>在 Notion 中查看</span>
+                </a>
             </div>
             <!-- 交互设计占位 -->
-            <div style="flex: 1; background: #1a1a1a; border-radius: 20px; padding: 20px; text-align: center;">
-                <i class="fas fa-mouse-pointer" style="font-size: 40px; color: #66ffcc; margin-bottom: 12px; display: block;"></i>
-                <h4 style="margin-bottom: 8px;">交互设计</h4>
-                <p style="font-size: 0.9rem; color: #ccc;">可交互原型 / 演示链接</p>
+            <div class="resource-card">
+                <div class="resource-icon"><i class="far fa-hand-pointer"></i></div>
+                <span class="resource-label">Prototype</span>
+                <h4>交互设计</h4>
+                <p>可交互原型 / 演示链接</p>
                 <!-- 用户可替换为真实原型链接 -->
-                <a href="#" style="color: #66ffcc; text-decoration: none; display: inline-block; margin-top: 8px;">🔗 在线预览 →</a>
+                <a href="#" class="resource-link"><i class="fas fa-arrow-right"></i><span>在线预览</span></a>
             </div>
         </div>
 
         <!-- ========= 评分反馈区域（使用 Formspree 收集数据） ========= -->
         <div class="feedback-area" id="feedbackArea">
-            <h3>📝 给这个项目打分 & 提出建议</h3>
+            <h3 class="section-heading">
+                <span class="heading-icon"><i class="far fa-comment-alt"></i></span>
+                <span class="title-text">给这个项目打分 & 提出建议</span>
+            </h3>
             <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
                 <span>你的评分：</span>
                 <div class="rating-stars" id="starRating">
@@ -108,11 +147,42 @@
                 <label for="suggestion">你的建议：</label>
                 <textarea id="suggestion" rows="3" placeholder="比如：页面加载速度、内容结构、希望增加什么功能..."></textarea>
                 <button id="submitFeedbackBtn" class="btn-primary">提交反馈</button>
-                <div id="feedbackStatus" style="margin-top: 12px; font-size: 0.8rem; color: #aaa;"></div>
+                <div id="feedbackStatus" class="feedback-status"></div>
             </div>
         </div>
     </div>
 </main>
+
+<div class="image-viewer" id="imageViewer" aria-hidden="true">
+    <div class="image-viewer-backdrop" id="imageViewerBackdrop"></div>
+    <div class="image-viewer-dialog" role="dialog" aria-modal="true" aria-labelledby="imageViewerTitle">
+        <div class="image-viewer-toolbar">
+            <div class="image-viewer-title-wrap">
+                <span class="image-viewer-label">Image Viewer</span>
+                <h4 id="imageViewerTitle">图片预览</h4>
+            </div>
+            <div class="image-viewer-actions">
+                <button type="button" class="viewer-btn" id="zoomOutBtn" aria-label="缩小">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="viewer-zoom" id="viewerZoomValue">100%</span>
+                <button type="button" class="viewer-btn" id="zoomInBtn" aria-label="放大">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button type="button" class="viewer-btn" id="zoomResetBtn">重置</button>
+                <a href="#" class="viewer-btn viewer-link" id="openOriginalBtn" target="_blank" rel="noopener noreferrer">新窗口打开</a>
+                <button type="button" class="viewer-btn viewer-close" id="closeViewerBtn" aria-label="关闭预览">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="image-viewer-stage" id="imageViewerStage">
+            <div class="image-viewer-canvas">
+                <img id="viewerImage" src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="container">
@@ -152,18 +222,106 @@
 
     const submitBtn = document.getElementById('submitFeedbackBtn');
     const statusDiv = document.getElementById('feedbackStatus');
+    const zoomableImages = document.querySelectorAll('.zoomable-image');
+    const imageViewer = document.getElementById('imageViewer');
+    const imageViewerBackdrop = document.getElementById('imageViewerBackdrop');
+    const viewerImage = document.getElementById('viewerImage');
+    const viewerTitle = document.getElementById('imageViewerTitle');
+    const viewerZoomValue = document.getElementById('viewerZoomValue');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const zoomResetBtn = document.getElementById('zoomResetBtn');
+    const closeViewerBtn = document.getElementById('closeViewerBtn');
+    const openOriginalBtn = document.getElementById('openOriginalBtn');
+    let currentZoom = 1;
+
+    function updateViewerZoom(nextZoom) {
+        currentZoom = Math.min(3, Math.max(0.6, nextZoom));
+        viewerImage.style.transform = `scale(${currentZoom})`;
+        viewerZoomValue.textContent = Math.round(currentZoom * 100) + '%';
+    }
+
+    function openImageViewer(image) {
+        viewerImage.src = image.currentSrc || image.src;
+        viewerImage.alt = image.alt || '图片预览';
+        viewerTitle.textContent = image.dataset.preview || image.alt || '图片预览';
+        openOriginalBtn.href = image.currentSrc || image.src;
+        imageViewer.classList.add('is-open');
+        imageViewer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('viewer-open');
+        updateViewerZoom(1);
+    }
+
+    function closeImageViewer() {
+        imageViewer.classList.remove('is-open');
+        imageViewer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('viewer-open');
+        viewerImage.src = '';
+    }
+
+    zoomableImages.forEach(image => {
+        image.addEventListener('click', function() {
+            openImageViewer(this);
+        });
+    });
+
+    zoomInBtn.addEventListener('click', function() {
+        updateViewerZoom(currentZoom + 0.2);
+    });
+
+    zoomOutBtn.addEventListener('click', function() {
+        updateViewerZoom(currentZoom - 0.2);
+    });
+
+    zoomResetBtn.addEventListener('click', function() {
+        updateViewerZoom(1);
+    });
+
+    closeViewerBtn.addEventListener('click', closeImageViewer);
+    imageViewerBackdrop.addEventListener('click', closeImageViewer);
+
+    document.addEventListener('keydown', function(event) {
+        if (!imageViewer.classList.contains('is-open')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            closeImageViewer();
+        }
+        if (event.key === '+' || event.key === '=') {
+            event.preventDefault();
+            updateViewerZoom(currentZoom + 0.2);
+        }
+        if (event.key === '-') {
+            event.preventDefault();
+            updateViewerZoom(currentZoom - 0.2);
+        }
+        if (event.key === '0') {
+            event.preventDefault();
+            updateViewerZoom(1);
+        }
+    });
+
+    viewerImage.addEventListener('wheel', function(event) {
+        if (!imageViewer.classList.contains('is-open')) {
+            return;
+        }
+
+        event.preventDefault();
+        updateViewerZoom(currentZoom + (event.deltaY < 0 ? 0.12 : -0.12));
+    }, { passive: false });
 
     submitBtn.addEventListener('click', async function() {
         const suggestion = document.getElementById('suggestion').value.trim();
         const rating = currentRating;
 
         if (rating === 0) {
-            statusDiv.innerHTML = '⚠️ 请先给项目打分（点击星星）';
+            statusDiv.innerHTML = '<span class="status-message"><i class="fas fa-exclamation-circle"></i><span>请先给项目打分（点击星星）</span></span>';
             statusDiv.style.color = '#ffaa66';
             return;
         }
         if (suggestion === '') {
-            statusDiv.innerHTML = '⚠️ 请填写你的建议';
+            statusDiv.innerHTML = '<span class="status-message"><i class="fas fa-exclamation-circle"></i><span>请填写你的建议</span></span>';
             statusDiv.style.color = '#ffaa66';
             return;
         }
@@ -184,7 +342,7 @@
                 })
             });
             if (response.ok) {
-                statusDiv.innerHTML = '✅ 反馈已提交，感谢你的建议！我会认真查看并迭代优化。';
+                statusDiv.innerHTML = '<span class="status-message"><i class="fas fa-check-circle"></i><span>反馈已提交，感谢你的建议！我会认真查看并迭代优化。</span></span>';
                 statusDiv.style.color = '#66ffcc';
                 // 清空表单
                 document.getElementById('suggestion').value = '';
@@ -199,7 +357,7 @@
                 throw new Error('提交失败');
             }
         } catch (error) {
-            statusDiv.innerHTML = '❌ 提交失败，请稍后重试。如果问题持续，请联系我：yozora@example.com';
+            statusDiv.innerHTML = '<span class="status-message"><i class="fas fa-times-circle"></i><span>提交失败，请稍后重试。如果问题持续，请联系我：yozora@example.com</span></span>';
             statusDiv.style.color = '#ff8888';
         } finally {
             submitBtn.disabled = false;
