@@ -11,7 +11,10 @@
 
 <nav class="navbar">
     <div class="container">
-        <a href="index.html" class="logo">Yozora</a>
+        <a href="index.html" class="logo back-link" onclick="if (window.history.length > 1) { history.back(); return false; }">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回上一页</span>
+        </a>
     </div>
 </nav>
 
@@ -22,7 +25,7 @@
             <span class="title-text">关于我</span>
         </h2>
         <p>你好，我叫 Yozora，感谢我们于人海中在此相遇，这是我的个人小站。 </p>
-        <p>现在我正在处于职业转型的阶段，正在求职 <strong>产品经理 </strong> 岗位，希望用技术+产品思维打造真正好用的产品。</p>
+        <p>现在我正在处于职业转型的阶段，正在求职 <strong>产品经理 </strong> 岗位，希望用技术+思维打造真正好用的产品。</p>
         <!-- ========= 用户可修改区域：电力工作经历 ========= -->
         <h3 class="section-heading">
             <span class="heading-icon"><i class="fas fa-bolt"></i></span>
@@ -33,11 +36,14 @@
             <p><strong class="meta-label"><span class="mini-icon"><i class="far fa-building"></i></span><span>公司/单位：</span></strong> 绍兴建元电力集团有限公司 / 国家电网</p>
             <p><strong class="meta-label"><span class="mini-icon"><i class="fas fa-wrench"></i></span><span>岗位：</span></strong> 带电作业电力工程师</p>
             <p><strong class="meta-label"><span class="mini-icon"><i class="far fa-clipboard"></i></span><span>主要职责与成果：</span></strong></p>
+            <p><strong class="meta-label"><span class="mini-icon"><i class="far fa-user"></i></span><span>工作负责人</span></strong></p>
             <ul class="detail-list">
-                <li>负责变电站设备巡检与故障处理，累计发现并排除隐患XX处；</li>
-                <li>参与电力调度系统升级项目，优化数据采集流程，效率提升20%；</li>
-                <li>编写设备维护手册及培训材料，培训新员工X名。</li>
-                <!-- 你可以自由增删或修改以上条目 -->
+                <li>负责中压带电作业技术协调与流程管理，参与一线作业，确保电力系统安全稳定运行。</li>
+                <li>编写、审核带电作业工作票、计划及安全规程 2000 余份，建立标准化编写审核流程，显著提升文档质量。</li>
+                <li>优化带电作业流程填写逻辑，减少 30%重复性工作，提高作业效率与安全性。</li>
+                <li>严格执行安全规程，保持零重大安全事故记录。</li>
+                <li>建立系统性资料归档体系，实现作业信息全流程可追溯。</li>
+                <li>协调多部门技术资源，推动带电作业标准化建设，提升整体作业质量。</li>
             </ul>
             <p><strong class="meta-label"><span class="mini-icon"><i class="far fa-lightbulb"></i></span><span>技能收获：</span></strong> 扎实的现场问题分析能力、跨部门沟通协调经验、对工业级系统的深入理解。</p>
         </div>
@@ -53,14 +59,69 @@
         </ul>
 
         <h3 class="section-heading">
-            <span class="heading-icon"><i class="far fa-star"></i></span>
-            <span class="title-text">价值观</span>
+            <span class="heading-icon"><i class="far fa-window-maximize"></i></span>
+            <span class="title-text">更多侧面</span>
         </h3>
-        <div class="value-tags">
-            <span class="value-tag"><i class="far fa-lightbulb"></i>用户至上</span>
-            <span class="value-tag"><i class="fas fa-wrench"></i>动手创造</span>
-            <span class="value-tag"><i class="fas fa-chart-line"></i>数据驱动</span>
-            <span class="value-tag"><i class="fas fa-handshake"></i>开放协作</span>
+    
+        <div class="about-grid">
+            <article class="about-card">
+                <div class="about-card-head">
+                    <div class="about-card-icon"><i class="far fa-briefcase"></i></div>
+                    <a href="experience.html" class="about-card-action" aria-label="进入我的经历页面">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="about-card-copy">
+                    <span class="about-card-label">Experience</span>
+                    <h4>我的经历</h4>
+                    <p>工作经历以及工作流</p>
+                </div>
+                <div class="about-card-tags">
+                    <span class="about-card-tag">作业日常</span>
+                    <span class="about-card-tag">工作票</span>
+                    <span class="about-card-tag">文档</span>
+                    <span class="about-card-tag">项目归档</span>
+                </div>
+            </article>
+
+            <article class="about-card">
+                <div class="about-card-head">
+                    <div class="about-card-icon"><i class="fas fa-cube"></i></div>
+                    <a href="hobbies.html" class="about-card-action" aria-label="进入我的爱好页面">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="about-card-copy">
+                    <span class="about-card-label">Hobby</span>
+                    <h4>我的爱好</h4>
+                    <p>个人爱好以及一些作品呈现</p>
+                </div>
+                <div class="about-card-tags">
+                    <span class="about-card-tag">3D打印</span>
+                    <span class="about-card-tag">个人作品</span>
+                    <span class="about-card-tag">游戏经历</span>
+                    <span class="about-card-tag">成就截图</span>
+                </div>
+            </article>
+
+            <article class="about-card">
+                <div class="about-card-head">
+                    <div class="about-card-icon"><i class="far fa-lightbulb"></i></div>
+                    <a href="https://mp.weixin.qq.com/s/_S1CBEpDDANddhOKHPT5rg" target="_blank" rel="noopener noreferrer" class="about-card-action" aria-label="填写公众号链接后可跳转">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="about-card-copy">
+                    <span class="about-card-label">Thinking</span>
+                    <h4>我的思考</h4>
+                    <p>个人学习思考的一些痕迹</p>
+                </div>
+                <div class="about-card-tags">
+                    <span class="about-card-tag">公众号文章</span>
+                    <span class="about-card-tag">学习笔记</span>
+                    <span class="about-card-tag">心理学自学</span>
+                </div>
+            </article>
         </div>
 
         <h3 class="section-heading">
@@ -68,7 +129,7 @@
             <span class="title-text">联系方式</span>
         </h3>
         <p>邮箱：282948422@QQ.com</p>
-        <p>GitHub：<a href="#" style="color:#66ffcc;">github.com/yozora0501</a></p>
+        <p>GitHub：<a href="https://github.com/yozora0501" target="_blank" rel="noopener noreferrer" style="color:#66ffcc;">github.com/yozora0501</a></p>
         <p>微信：yozora0501</p>
     </div>
 </main>
@@ -81,3 +142,4 @@
 
 </body>
 </html>
+
