@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的经历 · Yozora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo back-link" onclick="if (window.history.length > 1) { history.back(); return false; }">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回上一页</span>
+        </a>
+    </div>
+</nav>
+
+<main class="container experience-page">
+    <div class="card">
+        <h2 class="section-heading">
+            <span class="heading-icon"><i class="far fa-briefcase"></i></span>
+            <span class="title-text">我的经历</span>
+        </h2>
+        <p class="section-intro">这一页是我的工作内容与具体流程的结构化展示，用来快速了解和定位我的能力结构。</p>
+
+        <section class="experience-guide" aria-label="作业日常">
+            <div class="experience-guide-head">
+                <span class="story-card-badge">Guide First</span>
+                <h3>作业日常</h3>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-main">
+                    <p>负责中压带电作业工程的落地与执行，涵盖从计划到归档的完整链条。</p>
+                    <ul class="story-list">
+                        <li>计划前置：每日填写作业票、制定次日工作计划，编写作业流程与安全规范，并录入后台供服系统。</li>
+                        <li>现场执行：按工程计划前往指定地点，直接执行带电作业或担任现场监护，保障作业安全与合规。</li>
+                        <li>交付闭环：作业完成后对接交付，更新后台系统状态，整理归档工作票等工程文档，确保每个环节可追溯。</li>
+                    </ul>
+                </div>
+                <aside class="guide-scene">
+                    <h4>工作场景图</h4>
+                    <div class="guide-scene-slot">
+                        <img src="带电作业.png" alt="带电作业工作场景图" class="guide-scene-image">
+                    </div>
+                    <p>现场作业内容</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="story-card story-card-wide experience-board" aria-label="工作票与作业内容">
+            <div class="story-card-head">
+                <div class="story-card-icon"><i class="far fa-clipboard"></i></div>
+                <span class="story-card-badge">Execution Board</span>
+            </div>
+            <div class="story-card-copy">
+                <h3>工作流程</h3>
+                <p>这一板块集中展示我的执行能力：如何依据工作票推进现场作业、如何处理关键节点、以及如何让每个步骤都可核对、可复盘。</p>
+            </div>
+
+            <div class="board-pair">
+                <article class="board-block">
+                    <h4>工作票体系：关键节点管控</h4>
+                    <ul class="story-list">
+                        <li>票面类型包括：勘察单、基础票面、作业计划、工程提交单。高风险作业额外增加人员管控、车辆管控、三措一案等风险措施。</li>
+                        <li>流程优化：重新规划编写流程，按区块拆分、统一编写单区块项目，使记忆锚点更清晰，工作票错误率降低30%。</li>
+                        <li>通过 Python 调用 Word 文本库，实现重复内容一次编写、多次复用，减少手动录入带来的差错。</li>
+                    </ul>
+                </article>
+                <article class="board-block">
+                    <h4>工作推进流程：从任务到归档的完整链路</h4>
+                    <ul class="story-list">
+                        <li>接到任务 → 现场勘察 → 规划施工方案 → 提交流程与清单 → 编排人员 → 编写工作票 → 施工执行 → 项目归档。</li>
+                        <li>清晰的结构使项目安全有序推进，并能提前识别风险、制定预防措施。</li>
+                        <li>风险交底：作业前组织班前会，向全体成员交底风险点和操作要点；作业后召开班后会，复盘异常、记录改进点。</li>
+                        <li>跨部门同步：与调度、安监、运行等部门保持实时信息同步，及时获取停电计划、设备状态等关键信息，避免作业冲突。</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="process-flow" aria-label="关键流程">
+                <div class="flow-step">1. 任务接收</div>
+                <div class="flow-step">2. 票据核对</div>
+                <div class="flow-step">3. 现场执行</div>
+                <div class="flow-step">4. 节点确认</div>
+                <div class="flow-step">5. 问题闭环</div>
+            </div>
+
+            <div class="story-image-grid">
+                <div class="story-image-slot">
+                    <img src="工作票录入.png" alt="工作票录入截图" class="story-image-real">
+                </div>
+                <div class="story-image-slot">
+                    <img src="作业流程.png" alt="作业流程截图" class="story-image-real">
+                </div>
+            </div>
+        </section>
+
+        <section class="story-card story-card-wide experience-board" aria-label="文档整理与项目归档">
+            <div class="story-card-head">
+                <div class="story-card-icon"><i class="far fa-folder-open"></i></div>
+                <span class="story-card-badge">Knowledge Board</span>
+            </div>
+            <div class="story-card-copy">
+                <h3>文档整理</h3>
+                <p>这一板块体现我的复盘习惯与持续改进意识：不仅完成任务，也把经验转化为可复用知识，提升后续协作效率。</p>
+            </div>
+
+            <div class="board-pair">
+                <article class="board-block">
+                    <h4>文档整理：把经验沉淀成方法</h4>
+                    <ul class="story-list">
+                        <li>按任务类型整理过程记录、关键判断和处理结果，避免信息碎片化。</li>
+                        <li>统一命名与分类规则，提高检索效率，减少交接沟通成本。</li>
+                        <li>增加可复用模板，减少重复劳动并且可精准定位对应的作业流程。</li>
+                    </ul>
+                </article>
+                <article class="board-block">
+                    <h4>项目归档：让成果可追溯、可复用</h4>
+                    <ul class="story-list">
+                        <li>按阶段整理输入材料、执行记录、结果产出和复盘结论。</li>
+                        <li>按工程时间规划梳理归档项目，并且整理成册，项目全流程全时间段可追溯。</li>
+                        <li>纸面，后台双端留痕，复盘时可更精确定位数据。</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="process-flow" aria-label="持续改进循环">
+                <div class="flow-step">1. 记录</div>
+                <div class="flow-step">2. 分类</div>
+                <div class="flow-step">3. 归档</div>
+                <div class="flow-step">4. 复盘</div>
+                <div class="flow-step">5. 迭代</div>
+            </div>
+
+            <div class="story-image-grid story-image-grid-wide">
+                <div class="story-image-slot">
+                    <img src="线路图.png" alt="线路图截图" class="story-image-real">
+                </div>
+                <div class="story-image-slot">
+                    <img src="归档票面.png" alt="归档票面截图" class="story-image-real">
+                </div>
+                <div class="story-image-slot">
+                    <img src="归档整理.png" alt="归档整理截图" class="story-image-real">
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<div class="image-viewer" id="imageViewer" aria-hidden="true">
+    <div class="image-viewer-backdrop" id="imageViewerBackdrop"></div>
+    <div class="image-viewer-dialog" role="dialog" aria-modal="true" aria-labelledby="imageViewerTitle">
+        <div class="image-viewer-toolbar">
+            <div class="image-viewer-title-wrap">
+                <span class="image-viewer-label">Image Viewer</span>
+                <h4 id="imageViewerTitle">图片预览</h4>
+            </div>
+            <div class="image-viewer-actions">
+                <button type="button" class="viewer-btn" id="zoomOutBtn" aria-label="缩小">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="viewer-zoom" id="viewerZoomValue">100%</span>
+                <button type="button" class="viewer-btn" id="zoomInBtn" aria-label="放大">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button type="button" class="viewer-btn" id="zoomResetBtn">重置</button>
+                <a href="#" class="viewer-btn viewer-link" id="openOriginalBtn" target="_blank" rel="noopener noreferrer">新窗口打开</a>
+                <button type="button" class="viewer-btn viewer-close" id="closeViewerBtn" aria-label="关闭预览">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="image-viewer-stage">
+            <div class="image-viewer-canvas">
+                <img id="viewerImage" src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Yozora · 本网站为个人作品集，仅用于展示</p>
+    </div>
+</footer>
+
+<script>
+    (function () {
+        const previewImages = document.querySelectorAll('.guide-scene-image, .story-image-real, .hobby-shot-image');
+        if (!previewImages.length) {
+            return;
+        }
+
+        const imageViewer = document.getElementById('imageViewer');
+        const imageViewerBackdrop = document.getElementById('imageViewerBackdrop');
+        const viewerImage = document.getElementById('viewerImage');
+        const viewerTitle = document.getElementById('imageViewerTitle');
+        const viewerZoomValue = document.getElementById('viewerZoomValue');
+        const zoomInBtn = document.getElementById('zoomInBtn');
+        const zoomOutBtn = document.getElementById('zoomOutBtn');
+        const zoomResetBtn = document.getElementById('zoomResetBtn');
+        const closeViewerBtn = document.getElementById('closeViewerBtn');
+        const openOriginalBtn = document.getElementById('openOriginalBtn');
+        let currentZoom = 1;
+
+        function updateViewerZoom(nextZoom) {
+            currentZoom = Math.min(3, Math.max(0.6, nextZoom));
+            viewerImage.style.transform = `scale(${currentZoom})`;
+            viewerZoomValue.textContent = Math.round(currentZoom * 100) + '%';
+        }
+
+        function openImageViewer(image) {
+            viewerImage.src = image.currentSrc || image.src;
+            viewerImage.alt = image.alt || '图片预览';
+            viewerTitle.textContent = image.alt || '图片预览';
+            openOriginalBtn.href = image.currentSrc || image.src;
+            imageViewer.classList.add('is-open');
+            imageViewer.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('viewer-open');
+            updateViewerZoom(1);
+        }
+
+        function closeImageViewer() {
+            imageViewer.classList.remove('is-open');
+            imageViewer.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('viewer-open');
+            viewerImage.src = '';
+        }
+
+        previewImages.forEach(function (image) {
+            image.addEventListener('click', function () {
+                openImageViewer(this);
+            });
+        });
+
+        zoomInBtn.addEventListener('click', function () {
+            updateViewerZoom(currentZoom + 0.2);
+        });
+
+        zoomOutBtn.addEventListener('click', function () {
+            updateViewerZoom(currentZoom - 0.2);
+        });
+
+        zoomResetBtn.addEventListener('click', function () {
+            updateViewerZoom(1);
+        });
+
+        closeViewerBtn.addEventListener('click', closeImageViewer);
+        imageViewerBackdrop.addEventListener('click', closeImageViewer);
+
+        document.addEventListener('keydown', function (event) {
+            if (!imageViewer.classList.contains('is-open')) {
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                closeImageViewer();
+            }
+            if (event.key === '+' || event.key === '=') {
+                event.preventDefault();
+                updateViewerZoom(currentZoom + 0.2);
+            }
+            if (event.key === '-') {
+                event.preventDefault();
+                updateViewerZoom(currentZoom - 0.2);
+            }
+            if (event.key === '0') {
+                event.preventDefault();
+                updateViewerZoom(1);
+            }
+        });
+
+        viewerImage.addEventListener('wheel', function (event) {
+            if (!imageViewer.classList.contains('is-open')) {
+                return;
+            }
+            event.preventDefault();
+            updateViewerZoom(currentZoom + (event.deltaY < 0 ? 0.12 : -0.12));
+        }, { passive: false });
+    })();
+</script>
+
+</body>
+</html>

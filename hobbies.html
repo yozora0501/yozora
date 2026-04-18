@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的爱好 · Yozora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo back-link" onclick="if (window.history.length > 1) { history.back(); return false; }">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回上一页</span>
+        </a>
+    </div>
+</nav>
+
+<main class="container hobbies-page">
+    <div class="card hobbies-card">
+        <h2 class="section-heading">
+            <span class="heading-icon"><i class="fas fa-cube"></i></span>
+            <span class="title-text">我的爱好</span>
+        </h2>
+        <p class="section-intro">这一页展示我的兴趣投入方式：从动手创作到系统学习，再到长期体验。这是我理解世界与世界交互的入口</p>
+
+        <div class="hobby-stack">
+            <section class="hobby-section hobby-section-featured" aria-label="3D打印与作品展示">
+                <div class="hobby-head">
+                    <div class="story-card-icon"><i class="fas fa-cube"></i></div>
+                    <span class="story-card-badge">3D PRINT + WORKS</span>
+                </div>
+                <div class="hobby-copy">
+                    <h3>3D 打印与作品展示</h3>
+                    <p>这一部分用于展示我3d打印一些小作品，以及围绕对于3d打印的理解。</p>
+                    <ul class="story-list">
+                        <li>独立设计并打印无人机零件、机械结构件、手办模型等，熟悉FDM/光固化打印原理及后处理工艺。</li>
+                        <li>掌握建模软件（Fusion 360 / Blender 基础），从设计到成品打印全流程闭环。</li>
+                        <li>了解多种打印材料特性，如pla、petg、abs等，能够根据不同适用场景选择对应的材料。</li>
+                        <li>了解打印过程的失败点，如翘边，飞丝，喷头堵塞，传动皮带松动等情况的出现原因，并且能根据情况找到相应的应对措施使作品最后能够完整产出。</li>
+                        <li>下面是我的一些成品展示。</li>
+                    </ul>
+                </div>
+                <div class="hobby-shot-grid hobby-shot-grid-4">
+                    <figure class="hobby-shot-slot">
+                        <img src="3d打印.png" alt="3D打印过程" class="hobby-shot-image">
+                        <figcaption>3D 打印过程</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="成品展示.png" alt="成品展示" class="hobby-shot-image">
+                        <figcaption>成品展示</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="模型切片.png" alt="模型切片" class="hobby-shot-image">
+                        <figcaption>模型切片</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="模型成品.png" alt="模型成品" class="hobby-shot-image">
+                        <figcaption>模型成品</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="hobby-section" aria-label="无人机从0到1">
+                <div class="hobby-head">
+                    <div class="story-card-icon"><i class="fas fa-helicopter"></i></div>
+                    <span class="story-card-badge">UAV 0 → 1</span>
+                </div>
+                <div class="hobby-copy">
+                    <h3>无人机从 0-1：组装、调试、考证</h3>
+                    <p>这一部分用于展示我的无人机项目以及一些关键节点。</p>
+                    <ul class="story-list">
+                        <li>自主设计无人机机架结构，建模，调试并3d打印出成品。</li>
+                        <li>从零组装四轴无人机（选型、焊接、飞控调参、动力匹配），成功试飞并优化PID参数。</li>
+                        <li>考取中型多旋翼超视距无人机机长证，具备合法飞行与任务规划能力。</li>
+                        <li>下面是我的一些成果展示。</li>
+                    </ul>
+                </div>
+                <div class="hobby-shot-grid hobby-shot-grid-3">
+                    <figure class="hobby-shot-slot">
+                        <img src="飞控原理图.png" alt="飞控原理图" class="hobby-shot-image">
+                        <figcaption>飞控原理图</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="3d打印无人机.png" alt="3D打印无人机" class="hobby-shot-image">
+                        <figcaption>3D 打印无人机</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="无人机执照.png" alt="无人机执照" class="hobby-shot-image">
+                        <figcaption>无人机执照</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="hobby-section" aria-label="游戏深度体验">
+                <div class="hobby-head">
+                    <div class="story-card-icon"><i class="fas fa-gamepad"></i></div>
+                    <span class="story-card-badge">DEEP GAMING</span>
+                </div>
+                <div class="hobby-copy">
+                    <h3>游戏深度体验</h3>
+                    <p>这一部分用于展示我对于游戏的深度游玩体验以及一些游戏理解。</p>
+                    <ul class="story-list">
+                        <li>我偏爱竞技、策略与魂系游戏。它们不只是消遣，更像是思维训练场。</li>
+                        <li>马斯克说过一句话，我印象很深：“面对游戏中的怪物，就像面对自己心中的怪物。打倒它，就像是打到了自己心中的敌人。”魂系游戏的高难度与碎片化叙事，让我着迷——在一个充满线索的世界里，从只言片语、场景细节中拼凑出宏大的故事，每一次推进都是推理与勇气的结果。那种“不断战胜强敌、向前行走”的感觉，在现实中也能给我力量。</li>
+                        <li>竞技类游戏则是另一种修行。胜负的关键在于不断试错，并在过程中选择最优路线。我会研究攻略、拆解战术、反复练习某个技能，在一次次失败中找到那套“成功率最高的打法”。当完全沉浸其中时，时间仿佛消失，只剩下“如何做得更好”这一个念头。</li>
+                        <li>游戏则是我理解世界和构建系统的另一个窗口。</li>
+                        <li>下面是我的一些游戏经历和截图。</li>
+                    </ul>
+                </div>
+                <div class="hobby-shot-grid hobby-shot-grid-3">
+                    <figure class="hobby-shot-slot">
+                        <img src="埃尔登法环.png" alt="埃尔登法环截图" class="hobby-shot-image">
+                        <figcaption>埃尔登法环</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="ow截图.png" alt="OW截图" class="hobby-shot-image">
+                        <figcaption>OW 截图</figcaption>
+                    </figure>
+                    <figure class="hobby-shot-slot">
+                        <img src="steam截图.png" alt="Steam截图" class="hobby-shot-image">
+                        <figcaption>Steam 截图</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<div class="image-viewer" id="imageViewer" aria-hidden="true">
+    <div class="image-viewer-backdrop" id="imageViewerBackdrop"></div>
+    <div class="image-viewer-dialog" role="dialog" aria-modal="true" aria-labelledby="imageViewerTitle">
+        <div class="image-viewer-toolbar">
+            <div class="image-viewer-title-wrap">
+                <span class="image-viewer-label">Image Viewer</span>
+                <h4 id="imageViewerTitle">图片预览</h4>
+            </div>
+            <div class="image-viewer-actions">
+                <button type="button" class="viewer-btn" id="zoomOutBtn" aria-label="缩小">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <span class="viewer-zoom" id="viewerZoomValue">100%</span>
+                <button type="button" class="viewer-btn" id="zoomInBtn" aria-label="放大">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button type="button" class="viewer-btn" id="zoomResetBtn">重置</button>
+                <a href="#" class="viewer-btn viewer-link" id="openOriginalBtn" target="_blank" rel="noopener noreferrer">新窗口打开</a>
+                <button type="button" class="viewer-btn viewer-close" id="closeViewerBtn" aria-label="关闭预览">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="image-viewer-stage">
+            <div class="image-viewer-canvas">
+                <img id="viewerImage" src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 Yozora · 本网站为个人作品集，仅用于展示</p>
+    </div>
+</footer>
+
+<script>
+    (function () {
+        const previewImages = document.querySelectorAll('.guide-scene-image, .story-image-real, .hobby-shot-image');
+        if (!previewImages.length) {
+            return;
+        }
+
+        const imageViewer = document.getElementById('imageViewer');
+        const imageViewerBackdrop = document.getElementById('imageViewerBackdrop');
+        const viewerImage = document.getElementById('viewerImage');
+        const viewerTitle = document.getElementById('imageViewerTitle');
+        const viewerZoomValue = document.getElementById('viewerZoomValue');
+        const zoomInBtn = document.getElementById('zoomInBtn');
+        const zoomOutBtn = document.getElementById('zoomOutBtn');
+        const zoomResetBtn = document.getElementById('zoomResetBtn');
+        const closeViewerBtn = document.getElementById('closeViewerBtn');
+        const openOriginalBtn = document.getElementById('openOriginalBtn');
+        let currentZoom = 1;
+
+        function updateViewerZoom(nextZoom) {
+            currentZoom = Math.min(3, Math.max(0.6, nextZoom));
+            viewerImage.style.transform = `scale(${currentZoom})`;
+            viewerZoomValue.textContent = Math.round(currentZoom * 100) + '%';
+        }
+
+        function openImageViewer(image) {
+            viewerImage.src = image.currentSrc || image.src;
+            viewerImage.alt = image.alt || '图片预览';
+            viewerTitle.textContent = image.alt || '图片预览';
+            openOriginalBtn.href = image.currentSrc || image.src;
+            imageViewer.classList.add('is-open');
+            imageViewer.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('viewer-open');
+            updateViewerZoom(1);
+        }
+
+        function closeImageViewer() {
+            imageViewer.classList.remove('is-open');
+            imageViewer.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('viewer-open');
+            viewerImage.src = '';
+        }
+
+        previewImages.forEach(function (image) {
+            image.addEventListener('click', function () {
+                openImageViewer(this);
+            });
+        });
+
+        zoomInBtn.addEventListener('click', function () {
+            updateViewerZoom(currentZoom + 0.2);
+        });
+
+        zoomOutBtn.addEventListener('click', function () {
+            updateViewerZoom(currentZoom - 0.2);
+        });
+
+        zoomResetBtn.addEventListener('click', function () {
+            updateViewerZoom(1);
+        });
+
+        closeViewerBtn.addEventListener('click', closeImageViewer);
+        imageViewerBackdrop.addEventListener('click', closeImageViewer);
+
+        document.addEventListener('keydown', function (event) {
+            if (!imageViewer.classList.contains('is-open')) {
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                closeImageViewer();
+            }
+            if (event.key === '+' || event.key === '=') {
+                event.preventDefault();
+                updateViewerZoom(currentZoom + 0.2);
+            }
+            if (event.key === '-') {
+                event.preventDefault();
+                updateViewerZoom(currentZoom - 0.2);
+            }
+            if (event.key === '0') {
+                event.preventDefault();
+                updateViewerZoom(1);
+            }
+        });
+
+        viewerImage.addEventListener('wheel', function (event) {
+            if (!imageViewer.classList.contains('is-open')) {
+                return;
+            }
+            event.preventDefault();
+            updateViewerZoom(currentZoom + (event.deltaY < 0 ? 0.12 : -0.12));
+        }, { passive: false });
+    })();
+</script>
+
+</body>
+</html>
